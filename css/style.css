@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/* fonte do google */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* fonte da internet */
+@font-face{
+    font-family:'Android' ;
+    src: url("../midias/fontes/idroid.otf") format('opentype');   
+ }
+ 
+/* branco e preto nao precisa cadastrar */
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+    --cor6: #ffff;
+
+    --fonte-padrao: 'Arial', 'Verdana','Helvetica', 'sans-serif';
+    --fonte-destaque:'Bebas Neue', cursive;
+    /* fonte generica sempre no final */
+    --fonte-android:'Android',cursive; 
+}
+/* configuração global  */
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /* espaco da linha */
+    line-height: 1.5em;
+    font-family:var(--fonte-padrao);   
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor2), var(--cor3), var(--cor4),var(--cor5));
+    background-color:fixed;
+    padding:10px;  
+}
+header>h1{
+    text-align:center;
+    color:var(--cor6);
+    padding:20px;
+    font-family:var(--fonte-destaque);
+    font-weight:normal;
+    font-size:1.8;
+}
+header>p{
+    text-align:center;
+    color:var(--cor6);
+    padding-bottom:20px;
+    font-size:1.2em;
+    max-width:600px;
+    margin:auto; 
+}
+header>nav>a{
+    text-align:left;
+    font-style:normal;
+    font-weight:bolder;
+    color:var(--cor6);
+    text-decoration: none;
+    /* de um para o outro vai fazer uma transicao de 1 segundo */
+    transition-duration: 0.5s;    
+}
+header>nav>a:hover{
+    background-color:var(--cor3);
+    border-radius:5px;
+    padding:5px;
+    color:var(--cor5);
+    padding:10px; 
+}
+nav{
+    box-shadow: 0px 9px 9px rgba(0,0,0,0.192);
+}
+a{  
+    text-decoration:none;
+    color:var(--cor5);
+    font-weight:bolder;
+    padding:2px; 
+}
+main a:hover{
+    text-decoration:underline;
+}
+main a {
+    background-color: var(--cor1);
+}
+.externo::after{
+    content: '\00A0\1F517';
+}
+main{
+    background-color:var(--cor3);
+    min-width:280px;
+    /*leve sombra */
+    box-shadow:0px 0px 10px rgba(0,0,0,0.418);
+}
+main>article{
+  margin:auto;
+  min-height:1800px;
+  background-color:var(--cor6);
+  max-width:820px;
+  min-width:280px;
+  border-radius: 0px 0px 10px 10px;  
+}
+main strong{
+    color: var(--cor01);
+    font-weight:bold;
+    padding:2px;
+}
+main>article>h1{
+    padding:10px;
+    font-family:var(--fonte-android);
+    color:var(--cor4);     
+}
+main>article>h2{
+  
+    font-family:var(--fonte-android);
+    color:var(--cor5);
+    margin:10px;
+    background-image:linear-gradient(to right , var(--cor1),transparent);    
+}
+main>article>p{
+    text-indent: 30px;
+    padding:10px; 
+}
+/* as imagens vao ter a largura independente do conteudo, de 100% */
+main img{
+    width:100%;
+}
+ /* o ideal seria gerar uma imagem maior */
+.pequena{
+     max-width: 350px;
+     /* centraliza */
+     margin:auto;
+     display:block;
+ }
+ 
+ /* video */
+section{
+    background-color:var(--cor5);
+    /* proporcao do monitor */
+    /* 16x9 = 1920*1080 */
+    /* regra de tres */
+    /* 16=100% // 9 = X */
+    padding-bottom : 56.25%; 
+    position:relative;
+    width:100%;
+    /* para deixar encostado na borda */
+    /* margin:0px -20px 0px -20px; */
+    /* padding:20px; */
+}
+section>iframe{
+    position: absolute;
+    width:90%;
+    height:90%;
+    border:none;
+    padding:20px;   
+}
+.aprender>h4{
+    background-color:var(--cor3);
+    color:var(--cor6);
+    padding:5px;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px;
+
+}
+.aprender{
+    border-radius: 10px ;
+    background-color:var(--cor1) ;
+    max-width:800px;
+    min-width:280px;
+    margin:10px;  
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.218); 
+}
+.aprender>p{
+    padding:10px;
+    text-indent: 30px;
+    
+}
+.aprender>ul{
+    padding:5px;
+    list-style-position: inside;
+    /* dividir em 2 colunas, pode dividir em mais */
+    columns:2;
+}
+.aprender>ul>li{
+    list-style-image:url(midias/imagens/acerto-12.png);
+    padding-left:5px; 
+}
+footer{
+  
+    background-color:var(--cor4);
+    text-align:center;
+    color:var(--cor6);   
+}
+footer a:hover{
+    color:var(--cor1);  
+}
